@@ -38,7 +38,7 @@ submitBtn.addEventListener("click", () => {
     if (error.textContent === "") {
       alert("Your Cab Is Booked! ");
       const url =
-        "https://wa.me/+916352481426?text=" +
+        "https://wa.me/+917990135511?text=" +
         "Pickup Location: " +
         pickupLocation.value +
         "%0a" +
