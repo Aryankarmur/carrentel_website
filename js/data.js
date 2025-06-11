@@ -42,11 +42,13 @@ submitBtn.addEventListener("click", () => {
         pickupDate: pickupDate.value,
         pickupTime: pickupTime.value,
         selectedCar: selectedCar.value,
-        username: username.value,
-        contact: contact.value,
+        user_name: username.value,
+        contact_number: contact.value,
       };
       alert("Your Cab Is Booked! ");
       console.log(userData);
+      const url = "https://wa.me/+916352481426?text=" + JSON.stringify(userData);
+      window.open(url).focus();
     } else {
       alert("Please Enter Valid Contact Number!");
     }
