@@ -36,18 +36,31 @@ submitBtn.addEventListener("click", () => {
     alert("Plese Enter Your Data! ");
   } else {
     if (error.textContent === "") {
-      const userData = {
-        pickupLocation: pickupLocation.value,
-        dropLocation: dropLocation.value,
-        pickupDate: pickupDate.value,
-        pickupTime: pickupTime.value,
-        selectedCar: selectedCar.value,
-        user_name: username.value,
-        contact_number: contact.value,
-      };
       alert("Your Cab Is Booked! ");
-      console.log(userData);
-      const url = "https://wa.me/+916352481426?text=" + JSON.stringify(userData);
+      const url =
+        "https://wa.me/+916352481426?text=" +
+        "Pickup Location: " +
+        pickupLocation.value +
+        "%0a" +
+        "Drop Location: " +
+        dropLocation.value +
+        "%0a" +
+        "Pickup Date: " +
+        pickupDate.value +
+        "%0a" +
+        "Pickup Time: " +
+        pickupTime.value +
+        "%0a" +
+        "Selected Car: " +
+        selectedCar.value +
+        "%0a" +
+        "User Name: " +
+        username.value +
+        "%0a" +
+        "Contact Number: " +
+        contact.value +
+        "%0a" +
+        "Thanks!";
       window.open(url).focus();
     } else {
       alert("Please Enter Valid Contact Number!");
